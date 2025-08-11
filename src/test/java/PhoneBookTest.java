@@ -18,4 +18,14 @@ public class PhoneBookTest {
         int count = phoneBook.add("Alice", "456");
         assertEquals(1, count);
     }
+    @Test
+    void testFindByNumber() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Alice", "123");
+        phoneBook.add("Bob", "456");
+
+        assertEquals("Alice", phoneBook.findByNumber("123"));
+        assertEquals("Bob", phoneBook.findByNumber("456"));
+        assertNull(phoneBook.findByNumber("999"));
+    }
 }

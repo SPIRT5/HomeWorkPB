@@ -10,4 +10,8 @@ public class PhoneBook {
         nameToNumber.putIfAbsent(name, number);
         return nameToNumber.size();
     }
+
+    public String findByNumber(String number) {
+        return null;
+    }
 }
