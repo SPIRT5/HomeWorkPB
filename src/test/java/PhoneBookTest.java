@@ -1,5 +1,7 @@
 package ru.netology;
+
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -18,6 +20,7 @@ public class PhoneBookTest {
         int count = phoneBook.add("Alice", "456");
         assertEquals(1, count);
     }
+
     @Test
     void testFindByNumber() {
         PhoneBook phoneBook = new PhoneBook();
@@ -28,6 +31,7 @@ public class PhoneBookTest {
         assertEquals("Bob", phoneBook.findByNumber("456"));
         assertNull(phoneBook.findByNumber("999"));
     }
+
     @Test
     void testFindByName() {
         PhoneBook phoneBook = new PhoneBook();
@@ -38,6 +42,7 @@ public class PhoneBookTest {
         assertEquals("456", phoneBook.findByName("Bob"));
         assertNull(phoneBook.findByName("Charlie"));
     }
+
     @Test
     void testPrintAllNames() {
         PhoneBook phoneBook = new PhoneBook();
